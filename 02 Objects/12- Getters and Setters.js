@@ -22,6 +22,7 @@ Setters are most often used in conjunction with getters to create a type of pseu
 It is not possible to simultaneously have a setter on a property that holds an actual value.
 */
 
+// 1. Defining Getters and Setters for a Single Object / Factories
 const person = {
   firstName: "Miguel",
   lastName: "Pimenta",
@@ -61,6 +62,7 @@ descriptor
 The descriptor for the property being defined or modified.
 */
 
+// 2. Defining Getters and Setters for Constructors
 function Circle(radius) {
   let color = "red"; // Because were we are using a variable, instead of the "this" keyword, color it is not a property from this object, so it is not accessible from the outside. It is only a variable with local scope to this function.
   this.radius = radius;
