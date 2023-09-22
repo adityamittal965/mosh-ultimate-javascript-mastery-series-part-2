@@ -60,7 +60,7 @@ function increase(obj) {
 }
 
 increase(obj);
-console.log(obj); // It returns { value: 11 }.
+console.log(obj.value); // It returns { value: 11 }.
 
 // In this case we are not dealing with two independent copies.
 // So any changes made to that object will be visible in the variable.
