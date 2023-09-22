@@ -44,7 +44,9 @@ delete circle.location;
 // To enumerate the members in an object:
 for (let key in circle) console.log(key, circle[key]);
 
-Object.keys(circle);
+Object.keys(circle);          // returns array of keys
+Object.values(circle);        // returns array of values
+Object.entries(circle);       // returns array of [key, value]
 
 // To see if an object has a given property
 if ("location" in circle)
