@@ -6,7 +6,7 @@ function Circle(radius) {
   this.radius = radius;
 
   let defaultLocation = { x: 0, y: 0 }; 
-  let computeOptimumLocation = (factor) => { // Using this technic we can convert this method to a private method.
+  let computeOptimumLocation = (factor) => { // Using this technique, we can convert this method to a private method.
     console.log("this is the best location");
   };
 
@@ -17,6 +17,6 @@ function Circle(radius) {
 }
 const myCircle = new Circle(10);
 
-// In contrast to scope we have clojure. It determines what variables will be accessible to a inner function.
+// In contrast to scope we have closure. It determines what variables will be accessible to a inner function.
 // The Draw function will be able to access all the local variable defined in it, and all the local variable defined in its parent function.
-// The defaultLocation and computeOptimumLocation are in the scope of the Circle function and the the clojure fo the draw function.
+// The defaultLocation and computeOptimumLocation are in the scope of the Circle function and the closure fo the draw function.
