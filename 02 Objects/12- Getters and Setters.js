@@ -81,6 +81,19 @@ function Circle(radius) {
 
       defaultLocation = value;
     }
+    /*
+    Equivalent to above block where arrow function has been used.
+    Object.defineProperty(this, 'defaultLocation', {
+    get: function(){
+      return defaultLocation;
+    },
+    set: function(value){
+      if (!value.x || !value.y) // In the setter we can add logic to validate the argument passed to it.
+        throw new Error("Invalid location")
+
+      defaultLocation = value;
+    }
+    */
   });
 }
 
