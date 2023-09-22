@@ -43,6 +43,9 @@ person.fullName = "Viviane Sedola"; // Here with the setter we modify the full n
 console.log(person.fullName); // Now with the getter the result is Viviane Sedola
 console.log(person);
 
+
+
+// 2. Defining Getters and Setters for Constructors
 /*
 Object.defineProperty()
 For this example using Object.defineProperty()
@@ -61,8 +64,6 @@ The name or Symbol of the property to be defined or modified.
 descriptor
 The descriptor for the property being defined or modified.
 */
-
-// 2. Defining Getters and Setters for Constructors
 function Circle(radius) {
   let color = "red"; // Because were we are using a variable, instead of the "this" keyword, color it is not a property from this object, so it is not accessible from the outside. It is only a variable with local scope to this function.
   this.radius = radius;
