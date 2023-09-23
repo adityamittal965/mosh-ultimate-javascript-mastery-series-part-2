@@ -1,5 +1,7 @@
 // 11 - Exercise;
 
+// Internally, we want to use an array to store the objects in the stack but we want to keep that array private but we don't want it to be accessible from the outside because we 
+// want the consumers of the stack to only use the push() and pop() methods. We will use to implement array as a private property.
 const _stack = new WeakMap();
 
 class Stack {
