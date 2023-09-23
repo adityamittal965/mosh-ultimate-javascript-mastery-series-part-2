@@ -39,7 +39,8 @@ function Shape() {
   console.log("this is a shape");
 }
 
-// Define the duplicate() method in the Shape prototype
+// Define the duplicate() method in the Shape prototype (Shape is a constructor function, Shape.prototype is the 
+// prototype of instances created by Shape constructor function).
 Shape.prototype.duplicate = function () {
   console.log("duplicate");
 };
@@ -48,7 +49,8 @@ function Circle(radius) {
   this.radius = radius;
 }
 
-// Define the draw() method in the Circle prototype
+// Define the draw() method in the Circle prototype (Circle is a constructor function, Circle.prototype is the 
+// prototype of instances created by Circle constructor function).
 Circle.prototype.draw = function () {
   console.log("draw circle");
 };
