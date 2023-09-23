@@ -40,7 +40,7 @@ function Shape() {
 }
 
 // Define the duplicate() method in the Shape prototype (Shape is a constructor function, Shape.prototype is the 
-// prototype of instances created by Shape constructor function).
+// prototype of instances created by the Shape constructor function).
 Shape.prototype.duplicate = function () {
   console.log("duplicate");
 };
@@ -50,7 +50,7 @@ function Circle(radius) {
 }
 
 // Define the draw() method in the Circle prototype (Circle is a constructor function, Circle.prototype is the 
-// prototype of instances created by Circle constructor function).
+// prototype of instances created by the Circle constructor function).
 Circle.prototype.draw = function () {
   console.log("draw circle");
 };
