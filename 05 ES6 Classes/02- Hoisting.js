@@ -11,21 +11,33 @@ An important difference between function declarations and class declarations is 
 You first need to declare your class and then access it, otherwise code like the following will throw a ReferenceError:
 */
 
+
+// variable declarations using 'var' (Hoisted with default initialization)
+console.log(number1);  // undefined (default initialization)
+var number1 = 10;
+console.log(number1)   // 10
+
+// variable declarations using 'let' and 'const' (Hoisted without default initialization)
+console.log(number2); // ReferenceError: cannot access 'number2' before initialization 
+// Temporal Dead Zone: Period during execution where let/const variables are hoisted but not accessible (as they don't have an initialization)
+var number2 = 10;  
+console.log(number2)  // 10
+
 sayHello();
 
-// Function declaration
+// Function declaration (Hoisted)
 function sayHello() {
   console.log("hello");
 }
 
-// Anonymous Function Expression
+// Anonymous Function Expression (Not Hoisted)
 let sayGoodbye = function () {
   console.log("bye");
 };
 
 sayGoodbye();
 
-// Class Declaration
+// Class Declaration (Not Hoisted)
 class Circle {
   draw() {
     console.log("draw");
@@ -35,7 +47,7 @@ class Circle {
 const newCircle = new Circle();
 newCircle.draw();
 
-// Class Expressions
+// Class Expressions (Not Hoisted)
 const Square = class {
   draw() {
     console.log("draw");
