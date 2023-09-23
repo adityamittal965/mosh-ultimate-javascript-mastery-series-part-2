@@ -16,15 +16,19 @@ console.log(Object.getPrototypeOf(objectConstructor));
 console.log(objectConstructor.constructor === Object); // true
 
 let arrayLiteral = [];
+console.log(Object.getPrototypeOf(arrayLiteral));
 console.log(arrayLiteral.constructor === Array); // true
 
 let arrayConstructor = new Array();
+console.log(Object.getPrototypeOf(arrayConstructor));
 console.log(arrayConstructor.constructor === Array); // true
 
 let numberLiteral = 3;
+console.log(Object.getPrototypeOf(numberLiteral));
 console.log(numberLiteral.constructor === Number); // true
 
 let numberConstructor = new Number(3);
+console.log(Object.getPrototypeOf(numberConstructor));
 console.log(numberConstructor.constructor === Number); // true
 
 
