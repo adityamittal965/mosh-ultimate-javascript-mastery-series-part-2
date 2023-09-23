@@ -7,28 +7,35 @@ Note that the value of this property is a reference to the function itself, not 
 The value is only read-only for primitive values such as 1, true, and "test".
 */
 
+/*
+"MyConstructor.prototype":  Doesn't return the prototype of MyConstructor, we're getting the prototype of MyConstructor's instances 
+instead. 
+If you want the prototype of MyConstructor,
+1. Object.getPrototypeOf(MyConstructor)     // preferred, or 
+2. MyConstructor.__proto__                  // bad because MDN says so
+*/
 let objectLiteral = {};
-console.log(Object.getPrototypeOf(objectLiteral))
+console.log(Object.getPrototypeOf(objectLiteral)); // Object
 console.log(objectLiteral.constructor === Object); // true
 
 let objectConstructor = new Object();
-console.log(Object.getPrototypeOf(objectConstructor));
+console.log(Object.getPrototypeOf(objectConstructor)); // Object
 console.log(objectConstructor.constructor === Object); // true
 
 let arrayLiteral = [];
-console.log(Object.getPrototypeOf(arrayLiteral));
+console.log(Object.getPrototypeOf(arrayLiteral)); // Array
 console.log(arrayLiteral.constructor === Array); // true
 
 let arrayConstructor = new Array();
-console.log(Object.getPrototypeOf(arrayConstructor));
+console.log(Object.getPrototypeOf(arrayConstructor)); // Array
 console.log(arrayConstructor.constructor === Array); // true
 
 let numberLiteral = 3;
-console.log(Object.getPrototypeOf(numberLiteral));
+console.log(Object.getPrototypeOf(numberLiteral)); // Nunber
 console.log(numberLiteral.constructor === Number); // true
 
 let numberConstructor = new Number(3);
-console.log(Object.getPrototypeOf(numberConstructor));
+console.log(Object.getPrototypeOf(numberConstructor)); // Number
 console.log(numberConstructor.constructor === Number); // true
 
 
