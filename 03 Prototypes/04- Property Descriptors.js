@@ -12,6 +12,7 @@ for (let key in person) console.log(key); // We will only see the key name.
 const objectBase = Object.getPrototypeOf(person);
 console.log(objectBase);
 
+// To get the attributes of a property 
 const descriptor = Object.getOwnPropertyDescriptor(objectBase, "toString"); // This will return an object called property descriptor
 console.log(descriptor);
 /*
@@ -23,7 +24,7 @@ console.log(descriptor);
 }
 */
 
-// We can set this properties for our person object.
+// To set the attributes of a property
 Object.defineProperty(person, "name", {
   writable: false,
   enumerable: false,
