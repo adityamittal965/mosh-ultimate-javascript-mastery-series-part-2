@@ -2,7 +2,9 @@
 
 // The WeakMap object is a collection of key/value pairs in which the keys are objects only and the values can be arbitrary values.
 // The object references in the keys are held weakly, meaning that they are a target of garbage collection (GC) if there is no other reference to the object anymore.
-
+// WeakMaps give us better protection than symbols. There is no way
+// to access private members implemented using WeakMaps from the
+// outside of an object.
 const _radius = new WeakMap();
 const _move = new WeakMap();
 
