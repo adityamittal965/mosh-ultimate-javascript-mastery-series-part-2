@@ -35,13 +35,18 @@ const _draw = Symbol();
 
 class CirclePrivate {
   constructor(radius) {
+    // "Kind of" private property"
     this[_radius] = radius; // To use the _radius Symbol as a property we use the bracket notation.
   }
   // In ES6 we can use the Computed Property Name feature to create a private method
   // We add brackets, the expression inside the brackets is evaluated, and the result will be use as the name of the method or property.
+  // "Kind of" private property"
   [_draw]() {
     console.log("draw");
   }
+  // By "kind of" I mean: these properties and methods are essentally
+  // part of the object and are accessible from the outside. But accessing
+  // them is hard and awkward.
 }
 
 const myPrivateCircle = new CirclePrivate(1);
