@@ -1,7 +1,8 @@
 // 08- Avoid Extending the Built-in Objects
 
 /*
-Although is quite simply to modify the prototype of an object we should avoid modifying built-in objects
+Although is quite simply to modify the prototype of an object we should avoid modifying built-in objects.
+Don't modify objects you don't own.
 */
 
 Array.prototype.shuffle = function() { // We add shuffle method to the Array built-in object.
