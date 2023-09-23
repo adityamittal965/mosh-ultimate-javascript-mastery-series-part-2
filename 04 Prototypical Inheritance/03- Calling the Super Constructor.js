@@ -11,7 +11,8 @@ Shape.prototype.duplicate = function () {
 };
 
 function Circle(radius, color) {
-  Shape.call(this, color); // Here we call the Shape function, and pass to it "this" witch will reference the object created when calling the Circle function, an instance of Circle, and the color paramter
+  // If we do Shape(color), the constructor of Shape will receive 'window' object as this and window.color would be set.
+  Shape.call(this, color); // Here we call the Shape function, and pass to it "this" which will reference the object created when calling the Circle function, an instance of Circle, and the color parameter
   this.radius = radius;
 }
 
