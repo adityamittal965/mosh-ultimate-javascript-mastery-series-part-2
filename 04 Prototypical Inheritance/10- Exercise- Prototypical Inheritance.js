@@ -24,6 +24,7 @@ function HtmlSelectElement(...elements) {
   };
 }
 
+// If we do HTMLSelectElement.prototype = Object.create(HTMLElement.prototype), HTMLSelectElement prototype will have focus() method but not the click() method.
 HtmlSelectElement.prototype = new HtmlElement();
 HtmlSelectElement.prototype.constructor = HtmlSelectElement;
 
