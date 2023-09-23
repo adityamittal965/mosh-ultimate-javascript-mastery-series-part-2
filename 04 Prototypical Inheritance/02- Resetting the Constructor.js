@@ -38,7 +38,8 @@ console.log(Circle.prototype.constructor); // It returns the Shape constructor f
 */
 
 // So if we try to create a new object with:
-const myObject = new Circle.prototype.constructor(); // We will get a shape object not a Circle object
+const myObject = new Circle.prototype.constructor(); // We will get a shape object not a Circle object, this is equivalent to
+// const myObject = new Circle();
 console.log(myObject);
 
 // In here we reset the constructor for the Circle and Square.
