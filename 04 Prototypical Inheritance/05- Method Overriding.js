@@ -35,7 +35,7 @@ Circle.prototype.duplicate = function () {
   // In case we want to call the duplicate method in the Parent object as well, we can use this syntax.
   Shape.prototype.duplicate();
 
-  // In case we are using "this" keyword in the implementation of the method i the Parent object, we must use the following syntax.
+  // In case we are using "this" keyword in the implementation of the method in the Parent object, we must use the following syntax.
   Shape.prototype.duplicate.call(this);
 
   console.log("duplicate circle");
